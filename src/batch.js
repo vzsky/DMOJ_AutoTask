@@ -35,6 +35,7 @@ const generateInit = async (files, path) => {
       group = []
     }
   }
+  group.push(pairs[pairs.length - 1])
   groups.push(group)
 
   // groups
@@ -49,7 +50,7 @@ const generateInit = async (files, path) => {
       validate: (score) => (score < 0 ? `Score should not be negative` : true),
     })
     let dictList = []
-    for (let pair in group) {
+    for (let pair of group) {
       dictList.push({ in: pair[0], out: pair[1] })
     }
     data.test_cases.push({ points: response.score, batched: dictList })

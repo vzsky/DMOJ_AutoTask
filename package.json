@@ -5,7 +5,7 @@
     "write-yaml": "^1.0.0"
   },
   "name": "dmoj_pusher",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "main.js",
   "repository": "https://github.com/vzsky/DMOJ_AutoTask.git",
   "author": "Touch Sungkawichai <talay@10ninox.com>",

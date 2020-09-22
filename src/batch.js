@@ -48,7 +48,11 @@ const generateInit = async (files, path) => {
       message: 'How many points for group ' + group[0][0][0] + ' ?',
       validate: (score) => (score < 0 ? `Score should not be negative` : true),
     })
-    data.test_cases.push({ points: response.score, batched: group })
+    let dictList = []
+    for (let pair in group) {
+      dictList.push({ in: pair[0], out: pair[1] })
+    }
+    data.test_cases.push({ points: response.score, batched: dictList })
   }
 
   yaml(writeTo, data, function (err) {

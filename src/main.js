@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const JSZip = require('jszip')
 const fs = require('fs')
 const prompts = require('prompts')
